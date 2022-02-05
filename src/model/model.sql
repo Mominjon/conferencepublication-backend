@@ -28,7 +28,6 @@ CREATE TABLE articles (
     articles_long_text text NOT NULL,
     articles_date VARCHAR(150) NOT NULL,
     articles_archive BIGINT REFERENCES Archives(Archives_id),
-    articles_for VARCHAR(250) NOT NULL,
     articles_keywords text NOT NULL,
     articles_pdf text NOT NULL,
     articles_page VARCHAR(250) NOT NULL

@@ -10,7 +10,6 @@ module.exports = {
                 articles_long_text,
                 articles_date,
                 articles_archive,
-                articles_for,
                 articles_keywords,
                 articles_pdf,
                 articles_page
@@ -23,7 +22,6 @@ module.exports = {
                 articles_long_text,
                 articles_date,
                 articles_archive,
-                articles_for,
                 articles_keywords,
                 articles_pdf,
                 articles_page

@@ -8,11 +8,10 @@ const new_article = `
         articles_long_text,
         articles_date,
         articles_archive,
-        articles_for,
         articles_keywords,
         articles_pdf,
         articles_page
-    ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING * 
+    ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING * 
 `
 
 const articles =  `
@@ -38,7 +37,6 @@ const New_Article = (
         articles_long_text,
         articles_date,
         articles_archive,
-        articles_for,
         articles_keywords,
         articles_pdf,
         articles_page
@@ -50,7 +48,6 @@ const New_Article = (
         articles_long_text,
         articles_date,
         articles_archive,
-        articles_for,
         articles_keywords,
         articles_pdf,
         articles_page)
