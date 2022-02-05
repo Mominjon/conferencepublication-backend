@@ -23,11 +23,7 @@ router
         check.check_admin(token)
         check == true ? next() : res.send("not admin")
     } ,  users.Delete_users)
-    .post("/login_user", function (req, res, next) {
-        const {token} = req.body
-        check.check_admin(token)
-        check == true ? next() : res.send("not admin")
-    } ,  users.Login_user)
+    .post("/login_user", users.Login_user)
 
     // archives
 
