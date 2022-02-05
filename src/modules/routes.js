@@ -46,7 +46,9 @@ router
         let chesks = await check.check_admin(token)
         chesks == true ? next() : res.send("not admin")
     } ,  articles.New_Article)
+    .get("/articles_for_archive", articles.Articles_for_archive)
     .get("/articles", articles.Articles)
+    
     .get("/one_articles", articles.One_Article)
     .post("/delete_article",async function  (req, res, next) {
         const {token} = req.body

@@ -24,7 +24,9 @@ const one_article = `
     ON articles.articles_archive = Archives.Archives_id
     WHERE articles.articles_id = $1
 `
-
+const articles_ss = `
+    SELECT * FROM articles
+`
 
 const delete_article = `
     DELETE FROM articles WHERE articles_id = $1
@@ -53,6 +55,8 @@ const New_Article = (
         articles_page)
 
 const Articles = (archive_id) => fetchAll(articles, archive_id)
+const Articles_ss = () => fetchAll(articles_ss)
+
 const One_Article = (articles_id) => fetch(one_article, articles_id)
 const Delete_Article = (articles_id) => fetch(delete_article, articles_id)
 
@@ -60,5 +64,6 @@ module.exports = {
     New_Article,
     Articles,
     One_Article,
-    Delete_Article
+    Delete_Article,
+    Articles_ss
 }

@@ -36,7 +36,16 @@ module.exports = {
             console.log(e)
         }
     },
-    Articles :async (req, res) => {
+    Articles : async (req, res) => {
+        try {
+            const rows = await model.Articles_ss()
+
+            res.send(rows)
+        }catch (e) {
+            console.log(e)
+        }
+    },
+    Articles_for_archive :async (req, res) => {
         try {
             const {articles_archive} = req.query
 
