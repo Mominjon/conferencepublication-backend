@@ -12,7 +12,8 @@ module.exports = {
                 articles_archive,
                 articles_for,
                 articles_keywords,
-                articles_pdf
+                articles_pdf,
+                articles_page
             } = req.body
 
             const rows = await model.New_Article(
@@ -24,7 +25,8 @@ module.exports = {
                 articles_archive,
                 articles_for,
                 articles_keywords,
-                articles_pdf
+                articles_pdf,
+                articles_page
             )
 
             if(rows) {

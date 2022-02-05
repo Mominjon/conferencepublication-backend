@@ -10,8 +10,9 @@ const new_article = `
         articles_archive,
         articles_for,
         articles_keywords,
-        articles_pdf
-    ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING * 
+        articles_pdf,
+        articles_page
+    ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING * 
 `
 
 const articles =  `
@@ -39,7 +40,8 @@ const New_Article = (
         articles_archive,
         articles_for,
         articles_keywords,
-        articles_pdf
+        articles_pdf,
+        articles_page
 ) => fetch(
     new_article, 
     articles_title,
@@ -50,7 +52,8 @@ const New_Article = (
         articles_archive,
         articles_for,
         articles_keywords,
-        articles_pdf)
+        articles_pdf,
+        articles_page)
 
 const Articles = (archive_id) => fetchAll(articles, archive_id)
 const One_Article = (articles_id) => fetch(one_article, articles_id)
