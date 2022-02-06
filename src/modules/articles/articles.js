@@ -67,6 +67,17 @@ module.exports = {
             console.log(e)
         }
     },
+    Search_article: async (req, res) => {
+        try {
+            const {key} = req.query
+
+            const rows = await model.Search_article(key)
+
+            res.json(rows)
+        }catch (e) {
+            console.log(e)
+        }
+    },
     Delete_article:async (req, res) => {
         try {
             const {articles_id} = req.body

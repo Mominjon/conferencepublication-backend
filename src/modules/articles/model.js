@@ -27,9 +27,13 @@ const one_article = `
 const articles_ss = `
     SELECT * FROM articles
 `
+const search_articles = `
+SELECT * FROM articles WHERE        articles_title ILIKE $1
+`
+
 
 const delete_article = `
-    DELETE FROM articles WHERE articles_id = $1
+    DELETE FROM articles WHERE articles_keywords = $1
 `
 
 const New_Article = (
@@ -59,11 +63,12 @@ const Articles_ss = () => fetchAll(articles_ss)
 
 const One_Article = (articles_id) => fetch(one_article, articles_id)
 const Delete_Article = (articles_id) => fetch(delete_article, articles_id)
-
+const Search_article = (key) => fetch(search_articles, key)
 module.exports = {
     New_Article,
     Articles,
     One_Article,
     Delete_Article,
-    Articles_ss
+    Articles_ss,
+    Search_article
 }
