@@ -33,7 +33,7 @@ const search_articles = `
 
 
 const delete_article = `
-    DELETE FROM articles WHERE articles_keywords = $1
+    DELETE FROM articles WHERE articles_id = $1
 `
 
 const New_Article = (

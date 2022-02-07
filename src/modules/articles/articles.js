@@ -84,6 +84,7 @@ module.exports = {
     Delete_article:async (req, res) => {
         try {
             const {articles_id} = req.body
+            console.log(articles_id)
             const rows = await model.Delete_Article(articles_id)
 
             res.send("ok")
