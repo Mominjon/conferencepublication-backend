@@ -28,7 +28,7 @@ const articles_ss = `
     SELECT * FROM articles
 `
 const search_articles = `
-SELECT * FROM articles WHERE        articles_title ILIKE $1
+    SELECT * FROM articles WHERE  articles_keywords ILIKE $1
 `
 
 

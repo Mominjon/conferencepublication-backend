@@ -72,8 +72,11 @@ module.exports = {
             const {key} = req.query
 
             const rows = await model.Search_article(key)
-
-            res.json(rows)
+            if(rows){
+                res.send(rows)
+            }else {
+                res.send("false")
+            }
         }catch (e) {
             console.log(e)
         }
